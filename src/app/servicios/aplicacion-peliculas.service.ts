@@ -16,7 +16,6 @@ export class AplicacionPeliculasService {
 
   buscarPelicula(title:string){
     this.url = `http://www.omdbapi.com/?s=${title}&apikey=${this.claveAPI}`;
-    //console.log(this.url)
     return this.http.get<InterfazPeliculas>(this.url)
   }
 
