@@ -5,8 +5,15 @@
 </ion-header>
 
 <ion-content>
-  <ion-searchbar [(ngModel)]="cadenaBusqueda" (ionChange)="cargarBusqueda($event)" ></ion-searchbar>
+  <ion-searchbar [(ngModel)]="cadenaBusqueda" (ionChange)="cargarBusqueda($event)"></ion-searchbar>
   <ion-list>
-    <ion-item button *ngFor="let pelicula of resultado"></ion-item>
+    <ion-item button *ngFor="let pelicula of (resultado | async)">
+      <ion-avatar slot="">
+        <img src="{{pelicula.Poster}}">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{pelicula.Title}}</h2>
+      </ion-label>
+    </ion-item>
   </ion-list>
 </ion-content>

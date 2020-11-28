@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { InterfazPeliculas } from '../../interfaces/InterfazPeliculas.interface';
 import { AplicacionPeliculasService } from '../../servicios/aplicacion-peliculas.service';
 
 @Component({
@@ -11,7 +9,7 @@ import { AplicacionPeliculasService } from '../../servicios/aplicacion-peliculas
 export class PeliculasPage implements OnInit {
 
   cadenaBusqueda: string = '';
-  resultado: Observable<InterfazPeliculas>;
+  resultado: Array<Object>;
 
   constructor(private appPeliculasService: AplicacionPeliculasService) {
    }
