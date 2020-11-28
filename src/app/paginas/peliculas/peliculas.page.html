@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Búsqueda de películas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="cadenaBusqueda" (ionChange)="cargarBusqueda($event)" ></ion-searchbar>
+  <ion-list>
+    <ion-item button *ngFor="let pelicula of resultado"></ion-item>
+  </ion-list>
+</ion-content>
