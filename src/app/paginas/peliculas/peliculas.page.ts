@@ -11,7 +11,7 @@ export class PeliculasPage implements OnInit {
   cadenaBusqueda: string = '';
   resultado: Array<Object>;
 
-  constructor(private appPeliculasService: AplicacionPeliculasService) {
+  constructor(private aplicacionPeliculasService: AplicacionPeliculasService) {
    }
 
   ngOnInit() {
