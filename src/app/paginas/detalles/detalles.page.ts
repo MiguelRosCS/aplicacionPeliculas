@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { InterfazPeliculas } from '../../interfaces/InterfazPeliculas.interface';
+import { AplicacionPeliculasService } from '../../servicios/aplicacion-peliculas.service';
+
 
 @Component({
   selector: 'app-detalles',
@@ -7,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetallesPage implements OnInit {
 
-  constructor() { }
+  constructor(private aplicacionPeliculasService: AplicacionPeliculasService) { }
 
   ngOnInit() {
   }

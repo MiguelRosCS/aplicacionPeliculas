@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { InterfazPeliculas } from '../../interfaces/InterfazPeliculas.interface';
 import { AplicacionPeliculasService } from '../../servicios/aplicacion-peliculas.service';
 
 @Component({
@@ -9,15 +11,14 @@ import { AplicacionPeliculasService } from '../../servicios/aplicacion-peliculas
 export class PeliculasPage implements OnInit {
 
   cadenaBusqueda: string = '';
-  resultado: Array<Object>;
+  peliculas: Observable<InterfazPeliculas>;
 
-  constructor(private aplicacionPeliculasService: AplicacionPeliculasService) {
-   }
+  constructor(private aplicacionPeliculasService: AplicacionPeliculasService) { }
 
   ngOnInit() {
   }
 
   cargarBusqueda(){
-    this.resultado = this.appPeliculasService.buscarPelicula(this.cadenaBusqueda);
+    this.peliculas = this.aplicacionPeliculasService.buscarPelicula(this.cadenaBusqueda);
   }
 }
