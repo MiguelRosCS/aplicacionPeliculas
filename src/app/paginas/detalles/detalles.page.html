@@ -1,9 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>detalles</ion-title>
+    <ion-title>Detalles</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
-</ion-content>
+<ion-content *ngIf="argumentos">
+  <div class="hola">
+    <img src="{{argumentos.Poster}}">
+    <ion-label><h1>{{argumentos.Title}}</h1></ion-label>
+  </div>
+  </ion-content>

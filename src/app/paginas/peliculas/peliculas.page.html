@@ -7,7 +7,7 @@
 <ion-content>
   <ion-searchbar [(ngModel)]="cadenaBusqueda" (ionChange)="cargarBusqueda($event)"></ion-searchbar>
   <ion-list>
-    <ion-item *ngFor="let pelicula of (peliculas | async)" [routerLink]="[pelicula.imdbID]">
+    <ion-item *ngFor="let pelicula of (peliculas | async)" [routerLink]="['/detalles', pelicula.imdbID]">
       <ion-avatar slot="start" *ngIf="pelicula.Poster !== 'N/A'">
         <img src="{{pelicula.Poster}}">
       </ion-avatar>
