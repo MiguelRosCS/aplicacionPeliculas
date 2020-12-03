@@ -1,5 +1,18 @@
-.hola {
+
+.centro {
     margin: auto;
-    background-color: aqua;
-    width: fit-content;
+    background-color: lightblue;
+    width: 60%;
+    border: 1px solid rgba(109, 0, 255, 0.7);
+}
+
+.titulo{
+    margin: auto;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.foto{
+    padding-left: 36%;
 }

@@ -1,12 +1,30 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Detalles</ion-title>
+    <ion-title *ngIf="argumentos">Detalles de la película {{argumentos.Title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content *ngIf="argumentos">
-  <div class="hola">
-    <img src="{{argumentos.Poster}}">
-    <ion-label><h1>{{argumentos.Title}}</h1></ion-label>
+  <div class="centro">
+    <ion-grid>
+      <ion-row>
+        <ion-col><img class="foto" src="{{argumentos.Poster}}"></ion-col>
+      </ion-row>
+      <ion-row><p class="titulo">{{argumentos.Title}}</p></ion-row>
+      <ion-row *ngIf="argumentos.Year!=='N/A'"><h4>Año: {{argumentos.Year}}</h4></ion-row>
+      <ion-row *ngIf="argumentos.Year==='N/A'"><h4>Año: No existe descripción acerca de este apartado.</h4></ion-row>
+      <ion-row *ngIf="argumentos.Director!=='N/A'"><h4>Director: {{argumentos.Director}}</h4></ion-row>
+      <ion-row *ngIf="argumentos.Director==='N/A'"><h4>Director: No existe descripción acerca de este apartado.</h4></ion-row>
+      <ion-row *ngIf="argumentos.Actores!=='N/A'"><h4>Actores: {{argumentos.Actors}}</h4></ion-row>
+      <ion-row *ngIf="argumentos.Actores==='N/A'"><h4>Actores: No existe descripción acerca de este apartado.</h4></ion-row>
+      <ion-row *ngIf="argumentos.Genre!=='N/A'"><h4>Género: {{argumentos.Genre}}</h4></ion-row>
+      <ion-row *ngIf="argumentos.Genre==='N/A'"><h4>Género: No existe descripción acerca de este apartado.</h4></ion-row>
+      <ion-row *ngIf="argumentos.Language!=='N/A'"><h4>Idioma(s): {{argumentos.Language}}</h4></ion-row>
+      <ion-row *ngIf="argumentos.Language==='N/A'"><h4>Idioma(s): No existe descripción acerca de este apartado.</h4></ion-row>
+      <ion-row *ngIf="argumentos.Production!=='N/A'"><h4>Producción: {{argumentos.Production}}</h4></ion-row>
+      <ion-row *ngIf="argumentos.Production==='N/A'"><h4>Producción: No existe descripción acerca de este apartado.</h4></ion-row>
+      <ion-row *ngIf="argumentos.Plot!=='N/A'"><h4>Descripción: {{argumentos.Plot}}</h4></ion-row>
+      <ion-row *ngIf="argumentos.Plot==='N/A'"><h4>Descripción: No existe descripción acerca de este apartado.</h4></ion-row>
+    </ion-grid>
   </div>
   </ion-content>
