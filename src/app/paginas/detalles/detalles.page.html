@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title *ngIf="argumentos">Detalles de la película {{argumentos.Title}}</ion-title>
+    <ion-title *ngIf="argumentos">Detalles de la película: {{argumentos.Title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -8,7 +8,7 @@
   <div class="centro">
     <ion-grid>
       <ion-row>
-        <ion-col><img class="foto" src="{{argumentos.Poster}}"></ion-col>
+        <ion-col><div class="box_Foto"><img class="foto" src="{{argumentos.Poster}}"></div></ion-col>
       </ion-row>
       <ion-row><p class="titulo">{{argumentos.Title}}</p></ion-row>
       <ion-row *ngIf="argumentos.Year!=='N/A'"><h4>Año: {{argumentos.Year}}</h4></ion-row>
